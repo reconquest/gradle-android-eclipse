@@ -8,16 +8,16 @@ repositories {
 }
 
 dependencies {
-    compile gradleApi()
+    implementation gradleApi()
 }
 
-version="1.1"
+version = "1.2"
 
 pluginBundle {
-  website='https://github.com/reconquest/gradle-android-eclipse'
-  vcsUrl='https://github.com/reconquest/gradle-android-eclipse.git'
-  description='A Gradle plug-in that enables generation of Eclipse project files (.project and .classpath) to enable use of the Eclipse IDE for Android projects.  Correctly adds Android AAR dependencies to the classpath, works with the new Android build system.'
-  tags=['Android','aar','Eclipse','ide']
+  website = 'https://github.com/reconquest/gradle-android-eclipse'
+  vcsUrl = 'https://github.com/reconquest/gradle-android-eclipse.git'
+  description = 'A Gradle plug-in that enables generation of Eclipse project files (.project and .classpath) to enable use of the Eclipse IDE for Android projects.  Correctly adds Android AAR dependencies to the classpath, works with the new Android build system.'
+  tags = [ 'Android', 'aar', 'Eclipse', 'ide' ]
 
 
   plugins {
@@ -38,4 +38,42 @@ buildscript {
       classpath "com.gradle.publish:plugin-publish-plugin:0.10.0"
     }
   }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'io.reconquest'
+            artifactId = 'gradle-android-eclipse'
+            from components.java
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
+            }
+            pom {
+                name = 'Android Eclipse plugin'
+                description = 'A Gradle plug-in that enables generation of Eclipse project files (.project and .classpath) to enable use of the Eclipse IDE for Android projects.  Correctly adds Android AAR dependencies to the classpath, works with the new Android build system.'
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/reconquest/gradle-android-eclipse'
+                    developerConnection = 'scm:git:ssh://github.com/reconquest/gradle-android-eclipse'
+                    url = 'http://github.com/reconquest/gradle-android-eclipse/'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            url = "maven/"
+        }
+    }
 }
