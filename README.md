@@ -1,6 +1,8 @@
 Android Eclipse Generator
 =========================
 
+*This is fork of https://github.com/greensopinion/gradle-android-eclipse*
+
 A Gradle plug-in that enables generation of Eclipse project files (.project and .classpath) to enable use of the Eclipse IDE for Android projects.
 
 This generator works with the new [Android build system](http://tools.android.com/tech-docs/new-build-system).
