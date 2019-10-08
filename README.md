@@ -26,7 +26,7 @@ How to Use
 
 Add the following to your build.gradle:
 
-    apply plugin: 'com.greensopinion.gradle-android-eclipse'
+    apply plugin: 'io.reconquest.gradle-android-eclipse'
     apply plugin: 'eclipse'
 
 	buildscript {
@@ -36,7 +36,7 @@ Add the following to your build.gradle:
 	        }
 	    }
 	    dependencies {
-	      classpath "gradle.plugin.com.greensopinion.gradle-android-eclipse:gradle-android-eclipse:1.1"
+	      classpath "gradle.plugin.io.reconquest.gradle-android-eclipse:gradle-android-eclipse:1.1"
 	    }
 	}
 
@@ -47,7 +47,7 @@ Add the following to your build.gradle:
 	  }
 	}
 
-See [build.gradle](https://github.com/greensopinion/gradle-android-eclipse/blob/master/src/test/SampleApplication/app/build.gradle) for a complete working example.
+See [build.gradle](https://github.com/reconquest/gradle-android-eclipse/blob/master/src/test/SampleApplication/app/build.gradle) for a complete working example.
 
 Then from the command-line run:
 

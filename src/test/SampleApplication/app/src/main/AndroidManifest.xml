@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.greensopinion.android.sample.test.sampleapplication">
+          package="io.reconquest.android.sample.test.sampleapplication">
 
     <application
         android:allowBackup="true"

@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.greensopinion.gradle-android-eclipse'
+apply plugin: 'io.reconquest.gradle-android-eclipse'
 apply plugin: 'eclipse'
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.greensopinion.android.sample.test.sampleapplication"
+        applicationId "io.reconquest.android.sample.test.sampleapplication"
         minSdkVersion 19
         targetSdkVersion 25
         versionCode 1
@@ -38,7 +38,7 @@ buildscript {
         }
     }
     dependencies {
-      classpath "gradle.plugin.com.greensopinion.gradle-android-eclipse:android-eclipse:0.2.2"
+      classpath "gradle.plugin.io.reconquest.gradle-android-eclipse:android-eclipse:0.2.2"
     }
 }
 
