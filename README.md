@@ -15,6 +15,7 @@ This plug-in hooks into the [Gradle eclipse plugin](https://docs.gradle.org/curr
  * Adds the following Android source paths:
     * `src/main/java`
     * `build/generated/source/r/debug`
+    * `build/generated/not_namespaced_r_class_sources/source/r/debug`
     * `build/generated/source/buildConfig/debug`
     * `build/generated/source/aidl/debug`
  * For any dependency packaged as an aar ([Android Archive](https://developer.android.com/studio/projects/android-library.html)), the aar is extracted into `build/exploded-aars`

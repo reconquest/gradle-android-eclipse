@@ -26,5 +26,9 @@ public class AddSourceFoldersAction implements Action<Classpath> {
     classpath.getEntries().add(new SourceFolder("build/generated/source/r/debug", "bin"));
     classpath.getEntries().add(new SourceFolder("build/generated/source/buildConfig/debug", "bin"));
     classpath.getEntries().add(new SourceFolder("build/generated/source/aidl/debug", "bin"));
+
+    classpath
+        .getEntries()
+        .add(new SourceFolder("build/generated/not_namespaced_r_class_sources/debug/r/", "bin"));
   }
 }
