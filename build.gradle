@@ -11,7 +11,8 @@ dependencies {
     implementation gradleApi()
 }
 
-version = "1.2"
+sourceCompatibility = 1.8
+version = "2.0"
 
 pluginBundle {
   website = 'https://github.com/reconquest/gradle-android-eclipse'
